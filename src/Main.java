@@ -82,6 +82,31 @@ public class Main {
         }
     }
 
+    public static void Factorielle(){
+        int c,resultat=1;
+        System.out.println("entrer nombre entier positif  : ");
+        c= scanner.nextInt();
+        if(c<0){
+            System.out.println("le factoriel ne marche pas pour un nombre negatif  ");
+            do {
+                System.out.println("entrer nombre entier positif : ");
+                c= scanner.nextInt();
+
+            }while(c<0);
+            for(int i=1;i<=c;i++){
+                resultat=resultat*i;
+            }
+            System.out.println("le factoriel de "+c+" = "+resultat);
+        }else {
+            for(int i=1;i<=c;i++){
+                resultat=resultat*i;
+            }
+            System.out.println("le factoriel de "+c+"  = "+resultat);
+        }
+
+
+    }
+
     public static void main(String[] args) {
 
         int choix;
@@ -113,6 +138,7 @@ public class Main {
                     RacineCarree();
                     break ;
                 case 7 :
+                    Factorielle();
                     break ;
                 case 8 :
                     System.out.println("AU REVOIR ET MERCI ");
