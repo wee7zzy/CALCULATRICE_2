@@ -67,6 +67,21 @@ public class Main {
         System.out.println(a+" a la puissance "+ b +" = "+resultat );
     }
 
+    public static void RacineCarree(){
+        System.out.println("entrer nombre : ");
+        a= scanner.nextFloat();
+        if(a<0){
+            System.out.println("la racine carree d'un nombre negative est impossible !!");
+            do {
+                System.out.println("entrer un nombre superieur ou egal a 0 : ");
+                a= scanner.nextFloat();
+            }while(a<0);
+            System.out.println("la racine carree de "+a+" = "+ Math.sqrt(a));
+        }else{
+            System.out.println("la racine carree de "+a+" = "+ Math.sqrt(a));
+        }
+    }
+
     public static void main(String[] args) {
 
         int choix;
@@ -95,6 +110,7 @@ public class Main {
                     Puissance();
                     break;
                 case 6 :
+                    RacineCarree();
                     break ;
                 case 7 :
                     break ;
