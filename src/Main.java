@@ -23,7 +23,7 @@ public class Main {
         a=scanner.nextFloat();
         System.out.print("entrer b : ");
         b=scanner.nextFloat();
-        System.out.println(" la resultat de a - b = " +(a-b) );
+        System.out.println(" le resultat de a - b = " +(a-b) );
     }
 
     public static void Multiplication(){
@@ -32,7 +32,28 @@ public class Main {
         a=scanner.nextFloat();
         System.out.print("entrer b : ");
         b=scanner.nextFloat();
-        System.out.println(" la resultat de a * b = " +(a*b) );
+        System.out.println(" le resultat de a * b = " +(a*b) );
+    }
+
+    public static void Division(){
+        float a,b;
+        System.out.print("entrer a : ");
+        a=scanner.nextFloat();
+        System.out.print("entrer b : ");
+        b=scanner.nextFloat();
+        if(b==0){
+            System.out.println("la division sur 0 est impossible dans R");
+            do {
+                System.out.println("entrer nouveau b : ");
+                b=scanner.nextFloat();
+            }while(b==0);
+            System.out.println("le resultat de a / b = "+(a/b));
+
+
+        }else {
+            System.out.println("le resultat de a / b = "+(a/b));
+
+        }
     }
 
     public static void main(String[] args) {
@@ -56,6 +77,15 @@ public class Main {
                 case 3 :
                     Multiplication();
                     break;
+                case 4 :
+                    Division();
+                    break;
+                case 5 :
+                    break;
+                case 6 :
+                    break ;
+                case 7 :
+                    break ;
                 case 8 :
                     System.out.println("AU REVOIR ET MERCI ");
                     break;
