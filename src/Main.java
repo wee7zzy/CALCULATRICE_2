@@ -26,6 +26,15 @@ public class Main {
         System.out.println(" la resultat de a - b = " +(a-b) );
     }
 
+    public static void Multiplication(){
+        float a,b;
+        System.out.print("entrer a : ");
+        a=scanner.nextFloat();
+        System.out.print("entrer b : ");
+        b=scanner.nextFloat();
+        System.out.println(" la resultat de a * b = " +(a*b) );
+    }
+
     public static void main(String[] args) {
 
         int choix;
@@ -43,6 +52,9 @@ public class Main {
                     break;
                 case 2 :
                     Soutraction();
+                    break;
+                case 3 :
+                    Multiplication();
                     break;
                 case 8 :
                     System.out.println("AU REVOIR ET MERCI ");
