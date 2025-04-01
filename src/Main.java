@@ -6,39 +6,23 @@ import java.util.Scanner;
 
 public class Main {
 
-    static float a,b;
-
+    static float a,b,resultat=1;
+    static int c;
     public static Scanner scanner=new Scanner(System.in);
 
     public static void Addition(){
-
-        System.out.print("entrer a : ");
-        a=scanner.nextFloat();
-        System.out.print("entrer b : ");
-        b=scanner.nextFloat();
         System.out.println(" la somme de a + b = " +(a+b) );
     }
 
     public static void Soutraction(){
-
-        System.out.print("entrer a : ");
-        a=scanner.nextFloat();
-        System.out.print("entrer b : ");
-        b=scanner.nextFloat();
         System.out.println(" le resultat de a - b = " +(a-b) );
     }
 
     public static void Multiplication(){
-
-        System.out.print("entrer a : ");
-        a=scanner.nextFloat();
-        System.out.print("entrer b : ");
-        b=scanner.nextFloat();
         System.out.println(" le resultat de a * b = " +(a*b) );
     }
 
     public static void Division(){
-
         System.out.print("entrer divident : ");
         a=scanner.nextFloat();
         System.out.print("entrer diviseur : ");
@@ -56,7 +40,6 @@ public class Main {
     }
 
     public static void Puissance(){
-        float resultat = 1;
         System.out.println("entrer base : ");
         a= scanner.nextFloat();
         System.out.println("entrer exposant : ");
@@ -83,7 +66,6 @@ public class Main {
     }
 
     public static void Factorielle(){
-        int c,resultat=1;
         System.out.println("entrer nombre entier positif  : ");
         c= scanner.nextInt();
         if(c<0){
@@ -103,20 +85,23 @@ public class Main {
             }
             System.out.println("le factoriel de "+c+"  = "+resultat);
         }
-
-
     }
 
     public static void main(String[] args) {
 
         int choix;
-
         System.out.println("Hello and welcome!");
 
         do{
             System.out.println("------MENU-------\n 1-ADDITION : \n 2-SOUSTRACTION : \n 3-MULTIPLICATION : \n 4-DIVISION : \n 5-PUISSANCE : \n 6-RACINE CARREE : \n 7-FACTORIELLE : \n 8-QUITTER");
             System.out.print("-----ENTRER VOTRE CHOIX : ");
             choix=scanner.nextInt();
+            if(choix>0 && choix <4){
+                System.out.print("entrer a : ");
+                a=scanner.nextFloat();
+                System.out.print("entrer b : ");
+                b=scanner.nextFloat();
+            }
 
             switch(choix){
                 case 1 :
@@ -147,6 +132,5 @@ public class Main {
                     System.out.println("CHOIX INTROUVABLE ,RESSAYER !!");
             }
         }while (choix!=8);
-
     }
 }
